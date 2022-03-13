@@ -1,8 +1,8 @@
 @layout('layouts/main')
-@set('title', 'Bacon factory')
+@set('title', 'Bacon Factory')
 
 @section('body')
-  @!component('snowdog/bacon', {
-    img: '/images/bacon.jpg'
+  @!component('components/baconFactory', {
+    source: 'resources/views/bacon.edge'
   })
 @end
