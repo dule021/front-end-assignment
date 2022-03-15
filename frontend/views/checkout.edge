@@ -1,0 +1,8 @@
+@layout('layouts/main')
+@set('title', 'Checkout')
+
+@section('body')
+  @!component('components/checkoutPage', {
+    source: 'resources/views/checkout.edge',
+  })
+@end

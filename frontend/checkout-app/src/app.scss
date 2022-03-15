@@ -1,0 +1,93 @@
+.checkout-page {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: seashell;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.checkout {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.checkout__inputs {
+  flex: 2;
+}
+
+.checkout__info {
+  flex: 1;
+}
+
+.checkout__input-container {
+  display: flex;
+  margin-bottom: 2rem;
+
+  .checkout__input {
+    flex: 1;
+    &:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.checkout__input-section {
+  padding-left: 4rem;
+}
+
+.checkout__input-section-header {
+  position: relative;
+}
+
+.checkout__input-section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.checkout__input-section-number {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  z-index: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+
+  &::before {
+    content: "";
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    top: -4px;
+    left: -10px;
+  }
+}
+
+.checkout__submit-button {
+  width: calc(100% - 4rem);
+  padding: 1rem;
+  margin-left: 4rem;
+  color: white;
+  background-color: green;
+  font-family: inherit;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

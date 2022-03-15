@@ -27,13 +27,8 @@ const renderBacon = (bacons) => {
   }
 };
 
-const initBaconPage = () => {
+export const init = () => {
   const baconPage = document.querySelector(".bacon-page");
-
-  if (!baconPage) {
-    return;
-  }
-
   baconCount = initBacons.length;
 
   baconPage
@@ -44,5 +39,3 @@ const initBaconPage = () => {
     .querySelector(".less-bacon-button")
     .addEventListener("click", reduceBacon);
 };
-
-export default initBaconPage;

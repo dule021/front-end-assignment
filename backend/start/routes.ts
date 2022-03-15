@@ -30,6 +30,10 @@ Route.get("/bacon", async ({ view }) => {
 });
 
 Route.get("/checkout", async ({ view }) => {
+  return view.render("checkout");
+});
+
+Route.get("/checkoutDetails", async ({ _, response }) => {
   const state = {
     cart: {
       items: [
@@ -44,7 +48,11 @@ Route.get("/checkout", async ({ view }) => {
     },
   };
 
-  return view.render("index", state);
+  try {
+    response.send(state);
+  } catch (error) {
+    response.badRequest(error.messages);
+  }
 });
 
 Route.post("/order", async ({ request, response }) => {
